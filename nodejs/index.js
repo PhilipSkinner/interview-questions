@@ -56,23 +56,16 @@ const isPalindrome = (word='') => {
 	return true
 };
 
-// console.log(isPalindrome("AtlTa"));
 
 // Write a function that takes an enumerable list of objects and shuffles
 // them into a different order.
-//
-// For example:
-//
-// shuffle(["one", "two"]);
-//
-// ; would return:
-//
-// [
-//   "two",
-//   "one"
-// ]
-const shuffle = (source) => {
-	throw new Error("Not implemented");
+
+const shuffle = (source=[]) => {
+	for (let i = source.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [source[i], source[j]] = [source[j], source[i]];
+    }
+	return source
 };
 
 // Write a function that sorts an array of integers into ascending
