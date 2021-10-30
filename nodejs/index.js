@@ -42,12 +42,21 @@ const distanceInKm = (miles) => {
 // Write a function that returns true if the word is a palindrome, false if
 // it is not.
 // For example:
-// isPalindrome("bolton");
 // isPalindrome("Anna");
 // Also complete the related test case for this function.
-const isPalindrome = (word) => {
-	throw new Error("Not implemented");
+const isPalindrome = (word='') => {
+	word = word.toLowerCase()
+	let i=0, j = word.length - 1
+	while(i<j){
+		if(word[i]!==word[j])
+			return false
+		i++, j--
+	}
+	
+	return true
 };
+
+// console.log(isPalindrome("AtlTa"));
 
 // Write a function that takes an enumerable list of objects and shuffles
 // them into a different order.
