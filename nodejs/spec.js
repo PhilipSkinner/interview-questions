@@ -61,8 +61,8 @@ describe("A set of functions", () => {
 	});
 
 	it("can correctly detect palindromes", () => {
-		let palindromes = [];
-		let invalid = [];
+		let palindromes = ['aba', 'abba', 'rrr'];
+		let invalid = ['shivesh', 'ram', 'shyam'];
 
 		palindromes.forEach((p) => {
 			expect(instance.isPalindrome(p)).toEqual(true);
@@ -78,7 +78,21 @@ describe("A set of functions", () => {
 	});
 
 	it("can sort lists", () => {
-		throw new Error("Not implemented");
+		let tests = 2
+		let lists = [
+			[10, 9, 4, 6, 60, 3],
+			[-1, 70, 5, 10, 15]
+		]
+
+		let sorted = [
+			[3, 4, 6, 9, 10, 60],
+			[-1, 5, 10, 15, 70]
+		]
+
+		for(let i=0; i<2; i++){
+			let result = instance.sort(lists[i])
+			expect(result).toEqual(sorted[i])
+		}
 	});
 
 	it("can sum fibonacci numbers", () => {
