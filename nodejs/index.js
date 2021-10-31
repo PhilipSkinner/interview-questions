@@ -100,14 +100,13 @@ const fibonacciSum = () => {
 
 	while(element < 4000000){
 		if(!(element & 1)){
-			console.log('element', element)
+			// console.log('element', element)
 			sum+=element
 		}
 		let next = element+prevElement
 		prevElement = element
 		element = next
 	}
-
 	return sum
 }
 
